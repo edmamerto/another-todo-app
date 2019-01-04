@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import TodoContainer from './TodoContainer'
+import Notes from './Notes'
 
 class TodoConatiner extends Component {
 	render() {
 		return (
-			<Note />
+			<Notes />
 		)
 	}
 }
