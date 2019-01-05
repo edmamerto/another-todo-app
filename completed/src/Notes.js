@@ -14,6 +14,17 @@ class Notes extends Component {
 		super(props)
 		this.renderForm = this.renderForm.bind(this)
 		this.renderEditDoneButtons = this.renderEditDoneButtons.bind(this)
+		this.renderPlaceholder = this.renderPlaceholder.bind(this)
+		this.edit = this.edit.bind(this)
+		this.state = {
+			isEditing: false
+		}
+	}
+
+	edit() {
+		this.setState({
+			isEditing: true
+		})
 	}
 
 	renderForm() {
@@ -27,9 +38,15 @@ class Notes extends Component {
 	renderEditDoneButtons() {
 		return (
 			<div>
-				<Button bsStyle="link" bsSize="xsmall">edit</Button>
+				<Button onClick={this.edit} bsStyle="link" bsSize="xsmall">edit</Button>
 				<Button bsStyle="primary" bsSize="xsmall">done</Button>
 			</div>
+		)
+	}
+
+	renderPlaceholder() {
+		return (
+			<p> Placeholder </p>
 		)
 	}
 
@@ -44,7 +61,7 @@ class Notes extends Component {
 						<Col xs={6} md={4}>
 							<Panel>
 								<Panel.Body>
-									{this.renderForm()}
+									{this.state.editing ? this.renderForm() : this.renderPlaceholder()}
 								</Panel.Body>
 								<Panel.Footer>
 									{this.renderEditDoneButtons()}
