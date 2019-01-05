@@ -17,6 +17,7 @@ class Notes extends Component {
 		this.renderPlaceholder = this.renderPlaceholder.bind(this)
 		this.edit = this.edit.bind(this)
 		this.save = this.save.bind(this)
+		this.renderCard = this.renderCard.bind(this)
 		this.state = {
 			isEditing: false
 		}
@@ -65,6 +66,27 @@ class Notes extends Component {
 		)
 	}
 
+	renderCard() {
+		return (
+			<Panel>
+				<Panel.Body>
+					{
+						this.state.isEditing ? 
+						this.renderForm() : 
+						this.renderPlaceholder()
+					}
+				</Panel.Body>
+				<Panel.Footer>
+					{
+						this.state.isEditing ? 
+						this.renderSaveButton() : 
+						this.renderEditDoneButtons()
+					}
+				</Panel.Footer>
+			</Panel>
+		)
+	}
+
 	render() {
 		return (
 			<div>
@@ -74,22 +96,7 @@ class Notes extends Component {
 				<Grid>
 					<Row>
 						<Col xs={6} md={4}>
-							<Panel>
-								<Panel.Body>
-									{
-										this.state.isEditing ? 
-										this.renderForm() : 
-										this.renderPlaceholder()
-									}
-								</Panel.Body>
-								<Panel.Footer>
-									{
-										this.state.isEditing ? 
-										this.renderSaveButton() : 
-										this.renderEditDoneButtons()
-									}
-								</Panel.Footer>
-							</Panel>
+							{this.renderCard()}
 						</Col>
 					</Row>
 				</Grid>
