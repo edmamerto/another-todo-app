@@ -13,6 +13,7 @@ class Notes extends Component {
 	constructor(props) {
 		super(props)
 		this.renderForm = this.renderForm.bind(this)
+		this.renderEditDoneButtons = this.renderEditDoneButtons.bind(this)
 	}
 
 	renderForm() {
@@ -20,6 +21,15 @@ class Notes extends Component {
 		    <FormGroup controlId="formControlsTextarea">
 		      <FormControl componentClass="textarea" placeholder="textarea" />
 		    </FormGroup>
+		)
+	}
+
+	renderEditDoneButtons() {
+		return (
+			<div>
+				<Button bsStyle="link" bsSize="xsmall">edit</Button>
+				<Button bsStyle="primary" bsSize="xsmall">done</Button>
+			</div>
 		)
 	}
 
@@ -37,8 +47,7 @@ class Notes extends Component {
 									{this.renderForm()}
 								</Panel.Body>
 								<Panel.Footer>
-									<Button bsStyle="link" bsSize="xsmall">edit</Button>
-									<Button bsStyle="primary" bsSize="xsmall">done</Button>
+									{this.renderEditDoneButtons()}
 								</Panel.Footer>
 							</Panel>
 						</Col>
