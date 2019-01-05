@@ -14,7 +14,7 @@ class Notes extends Component {
 		super(props)
 		this.renderForm = this.renderForm.bind(this)
 		this.renderEditDoneButtons = this.renderEditDoneButtons.bind(this)
-		this.renderPlaceholder = this.renderPlaceholder.bind(this)
+		this.renderNote = this.renderNote.bind(this)
 		this.edit = this.edit.bind(this)
 		this.save = this.save.bind(this)
 		this.renderCard = this.renderCard.bind(this)
@@ -60,20 +60,21 @@ class Notes extends Component {
 		)
 	}
 
-	renderPlaceholder() {
+	renderNote(note) {
 		return (
-			<p> {this.props.notes[0].note} </p>
+			<p> {note} </p>
 		)
 	}
 
-	renderCard() {
+	renderCard(note, i) {
 		return (
-			<Panel>
+			<Panel key={i}
+				   index={i}>
 				<Panel.Body>
 					{
 						this.state.isEditing ? 
 						this.renderForm() : 
-						this.renderPlaceholder()
+						this.renderNote(note.note)
 					}
 				</Panel.Body>
 				<Panel.Footer>
@@ -96,7 +97,7 @@ class Notes extends Component {
 				<Grid>
 					<Row>
 						<Col xs={6} md={4}>
-							{this.renderCard()}
+							{this.props.notes.map(this.renderCard)}
 						</Col>
 					</Row>
 				</Grid>
