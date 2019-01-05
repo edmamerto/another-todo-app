@@ -10,6 +10,18 @@ import {
 } from 'react-bootstrap'
 
 class Notes extends Component {
+	constructor(props) {
+		super(props)
+		this.renderForm = this.renderForm.bind(this)
+	}
+
+	renderForm() {
+		return (
+		    <FormGroup controlId="formControlsTextarea">
+		      <FormControl componentClass="textarea" placeholder="textarea" />
+		    </FormGroup>
+		)
+	}
 
 	render() {
 		return (
@@ -22,9 +34,7 @@ class Notes extends Component {
 						<Col xs={6} md={4}>
 							<Panel>
 								<Panel.Body>
-								    <FormGroup controlId="formControlsTextarea">
-								      <FormControl componentClass="textarea" placeholder="textarea" />
-								    </FormGroup>
+									{this.renderForm()}
 								</Panel.Body>
 								<Panel.Footer>
 									<Button bsStyle="link" bsSize="xsmall">edit</Button>
