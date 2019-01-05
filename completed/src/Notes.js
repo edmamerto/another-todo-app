@@ -44,6 +44,14 @@ class Notes extends Component {
 		)
 	}
 
+	renderSaveButton() {
+		return (
+			<div>
+				<Button bsStyle="success" bsSize="xsmall">save</Button>
+			</div>
+		)
+	}
+
 	renderPlaceholder() {
 		return (
 			<p> Placeholder </p>
@@ -61,10 +69,10 @@ class Notes extends Component {
 						<Col xs={6} md={4}>
 							<Panel>
 								<Panel.Body>
-									{this.state.editing ? this.renderForm() : this.renderPlaceholder()}
+									{this.state.isEditing ? this.renderForm() : this.renderPlaceholder()}
 								</Panel.Body>
 								<Panel.Footer>
-									{this.renderEditDoneButtons()}
+									{this.state.isEditing ? this.renderSaveButton() : this.renderEditDoneButtons()}
 								</Panel.Footer>
 							</Panel>
 						</Col>
