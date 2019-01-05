@@ -61,7 +61,7 @@ class Notes extends Component {
 
 	renderPlaceholder() {
 		return (
-			<p> Placeholder </p>
+			<p> {this.props.notes[0].note} </p>
 		)
 	}
 
