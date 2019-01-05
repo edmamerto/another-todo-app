@@ -16,6 +16,7 @@ class Notes extends Component {
 		this.renderEditDoneButtons = this.renderEditDoneButtons.bind(this)
 		this.renderPlaceholder = this.renderPlaceholder.bind(this)
 		this.edit = this.edit.bind(this)
+		this.save = this.save.bind(this)
 		this.state = {
 			isEditing: false
 		}
@@ -24,6 +25,12 @@ class Notes extends Component {
 	edit() {
 		this.setState({
 			isEditing: true
+		})
+	}
+
+	save(){
+		this.setState({
+			isEditing: false
 		})
 	}
 
@@ -47,7 +54,7 @@ class Notes extends Component {
 	renderSaveButton() {
 		return (
 			<div>
-				<Button bsStyle="success" bsSize="xsmall">save</Button>
+				<Button onClick={this.save} bsStyle="success" bsSize="xsmall">save</Button>
 			</div>
 		)
 	}
