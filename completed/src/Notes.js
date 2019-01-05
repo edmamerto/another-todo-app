@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Panel, Grid, Row, Col } from 'react-bootstrap'
+import { Panel, Grid, Row, Col, Button } from 'react-bootstrap'
 
 class Notes extends Component {
 
@@ -14,10 +14,12 @@ class Notes extends Component {
 						<Col xs={6} md={4}>
 							<Panel>
 								<Panel.Body>Basic panel example</Panel.Body>
+								<Panel.Footer>
+									<Button bsStyle="link" bsSize="xsmall">edit</Button>
+									<Button bsStyle="primary" bsSize="xsmall">done</Button>
+								</Panel.Footer>
 							</Panel>
 						</Col>
-					<Col xs={6} md={4}>
-					</Col>
 					</Row>
 				</Grid>
 			</div>
