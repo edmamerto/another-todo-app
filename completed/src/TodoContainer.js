@@ -34,7 +34,10 @@ class TodoContainer extends Component {
 
 	render() {
 		return (
-			<Notes notes={this.state.notes}/>
+			<Notes
+				notes={this.state.notes}
+				updateEditingState={this.updateEditingState}
+			/>
 		)
 	}
 }
