@@ -41,10 +41,10 @@ class Notes extends Component {
 		)
 	}
 
-	renderEditDoneButtons() {
+	renderEditDoneButtons(i) {
 		return (
 			<div>
-				<Button onClick={this.edit} bsStyle="link" bsSize="xsmall">edit</Button>
+				<Button onClick={() => this.edit(i)} bsStyle="link" bsSize="xsmall">edit</Button>
 				<Button bsStyle="primary" bsSize="xsmall">done</Button>
 			</div>
 		)
@@ -79,7 +79,7 @@ class Notes extends Component {
 					{
 						note.is_editing ?
 						this.renderSaveButton() :
-						this.renderEditDoneButtons()
+						this.renderEditDoneButtons(i)
 					}
 				</Panel.Footer>
 			</Panel>
