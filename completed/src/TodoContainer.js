@@ -8,15 +8,18 @@ class TodoContainer extends Component {
 			notes: [
 				{
 					id: 33,
-					note: "Call Lisa"
+					note: "Call Lisa",
+					is_selected: false
 				},
 				{
 					id: 34,
-					note: "Email John"
+					note: "Email John",
+                    is_selected: false
 				},
 				{
 					id: 35,
-					note: "Order printer ink"
+					note: "Order printer ink",
+                    is_selected: false
 				}
 			]
 		}
