@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Notes from './Notes'
 
-class TodoConatiner extends Component {
+class TodoContainer extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -29,4 +29,4 @@ class TodoConatiner extends Component {
 	}
 }
 
-export default TodoConatiner
+export default TodoContainer
