@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ce94c4-c177-4ce1-a23e-28b82bf9642b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/completed/src/Notes.js" afterPath="$PROJECT_DIR$/completed/src/Notes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/completed/src/TodoContainer.js" afterPath="$PROJECT_DIR$/completed/src/TodoContainer.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,6 +11,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="Notes.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/completed/src/Notes.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-1310">
+                    <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+                    <folding>
+                      <element signature="e#0#40#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileColors">
     <fileColor scope="Non-Project Files (Material Oceanic)" color="2E3C43" />
     <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
@@ -20,23 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Notes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/completed/src/Notes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/completed/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="216">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -57,8 +66,8 @@
       <file leaf-file-name="TodoContainer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/completed/src/TodoContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="-93">
+              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -255,12 +264,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547313138116</updated>
-      <workItem from="1547313139325" duration="5001000" />
+      <workItem from="1547313139325" duration="5897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5001000" />
+    <option name="totallyTimeSpent" value="5897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-254" y="-1057" width="960" height="1057" extended-state="0" />
@@ -315,8 +324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/completed/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="216">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -325,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/completed/src/Notes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+        <state relative-caret-position="-1310">
+          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -335,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/completed/src/TodoContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="-93">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

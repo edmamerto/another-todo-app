@@ -4,6 +4,7 @@ import Notes from './Notes'
 class TodoContainer extends Component {
 	constructor(props) {
 		super(props)
+		this.updateEditingState = this.updateEditingState.bind(this)
 		this.state = {
 			notes: [
 				{
@@ -23,6 +24,12 @@ class TodoContainer extends Component {
 				}
 			]
 		}
+	}
+
+	updateEditingState(i) {
+		this.setState(
+			this.state.notes[i].is_editing = !this.state.notes[i].is_editing
+		)
 	}
 
 	render() {

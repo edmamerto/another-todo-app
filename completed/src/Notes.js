@@ -81,7 +81,7 @@ class Notes extends Component {
 					{
 						note.is_editing ?
 						this.renderSaveButton() :
-						this.renderEditDoneButtons()
+						this.renderEditDoneButtons(i)
 					}
 				</Panel.Footer>
 			</Panel>
