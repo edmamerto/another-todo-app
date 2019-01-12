@@ -23,10 +23,8 @@ class Notes extends Component {
 		}
 	}
 
-	edit() {
-		this.setState({
-			isEditing: true
-		})
+	edit(i) {
+		this.props.updateEditingState(i)
 	}
 
 	save(){
@@ -81,7 +79,7 @@ class Notes extends Component {
 					{
 						note.is_editing ?
 						this.renderSaveButton() :
-						this.renderEditDoneButtons(i)
+						this.renderEditDoneButtons()
 					}
 				</Panel.Footer>
 			</Panel>
