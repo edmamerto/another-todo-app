@@ -27,10 +27,8 @@ class Notes extends Component {
 		this.props.updateEditingState(i)
 	}
 
-	save(){
-		this.setState({
-			isEditing: false
-		})
+	save(i){
+        this.props.updateEditingState(i)
 	}
 
 	renderForm() {
@@ -50,10 +48,10 @@ class Notes extends Component {
 		)
 	}
 
-	renderSaveButton() {
+	renderSaveButton(i) {
 		return (
 			<div>
-				<Button onClick={this.save} bsStyle="success" bsSize="xsmall">save</Button>
+				<Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall">save</Button>
 			</div>
 		)
 	}
@@ -78,7 +76,7 @@ class Notes extends Component {
 				<Panel.Footer>
 					{
 						note.is_editing ?
-						this.renderSaveButton() :
+						this.renderSaveButton(i) :
 						this.renderEditDoneButtons(i)
 					}
 				</Panel.Footer>
