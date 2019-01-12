@@ -9,17 +9,17 @@ class TodoContainer extends Component {
 				{
 					id: 33,
 					note: "Call Lisa",
-					is_selected: false
+					is_editing: false
 				},
 				{
 					id: 34,
 					note: "Email John",
-                    is_selected: false
+                    is_editing: false
 				},
 				{
 					id: 35,
 					note: "Order printer ink",
-                    is_selected: false
+                    is_editing: false
 				}
 			]
 		}

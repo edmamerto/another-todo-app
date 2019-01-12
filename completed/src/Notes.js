@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { 
-	Panel, 
-	Grid, 
-	Row, 
-	Col, 
-	Button, 
+import {
+	Panel,
+	Grid,
+	Row,
+	Col,
+	Button,
 	FormGroup,
 	FormControl
 } from 'react-bootstrap'
@@ -72,15 +72,15 @@ class Notes extends Component {
 				   index={i}>
 				<Panel.Body>
 					{
-						this.state.isEditing ? 
-						this.renderForm() : 
+						note.is_editing ?
+						this.renderForm() :
 						this.renderNote(note.note)
 					}
 				</Panel.Body>
 				<Panel.Footer>
 					{
-						this.state.isEditing ? 
-						this.renderSaveButton() : 
+						note.is_editing ?
+						this.renderSaveButton() :
 						this.renderEditDoneButtons()
 					}
 				</Panel.Footer>
