@@ -5,6 +5,7 @@ class TodoContainer extends Component {
 	constructor(props) {
 		super(props)
 		this.updateEditingState = this.updateEditingState.bind(this)
+		this.updateTodo = this.updateTodo.bind(this)
 		this.state = {
 			notes: [
 				{
@@ -26,6 +27,14 @@ class TodoContainer extends Component {
 		}
 	}
 
+	updateTodo(text, i) {
+		this.setState(prevState => ({
+			notes: prevState.notes.map(
+				note => (note.id !== i) ? note : {...note, note: text}
+			)
+		}))
+	}
+
 	updateEditingState(i) {
         const bool = !this.state.notes[i].is_editing
 		this.setState(prevState => ({
@@ -40,6 +49,7 @@ class TodoContainer extends Component {
 			<Notes
 				notes={this.state.notes}
 				updateEditingState={this.updateEditingState}
+				onChange={this.updateTodo}
 			/>
 		)
 	}

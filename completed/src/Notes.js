@@ -29,7 +29,7 @@ class Notes extends Component {
 
 	save(i){
         this.props.updateEditingState(i)
-        console.log(this.textarea.value)
+        this.props.onChange(this.textarea.value, i)
 	}
 
 	renderForm(i) {
