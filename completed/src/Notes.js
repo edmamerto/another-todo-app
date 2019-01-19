@@ -52,14 +52,6 @@ class Notes extends Component {
 		)
 	}
 
-	// renderSaveButton(i) {
-	// 	return (
-	// 		<div>
-	// 			<Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall" form="myForm" type="submit">save</Button>
-	// 		</div>
-	// 	)
-	// }
-
 	renderNote(note) {
 		return (
 			<p> {note} </p>
