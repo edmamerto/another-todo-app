@@ -33,9 +33,11 @@ class Notes extends Component {
 
 	renderForm() {
 		return (
-		    <FormGroup controlId="formControlsTextarea">
-		      <FormControl componentClass="textarea" placeholder="textarea" />
-		    </FormGroup>
+			<form>
+				<FormGroup controlId="formControlsTextarea">
+				  <FormControl componentClass="textarea" placeholder="textarea" />
+				</FormGroup>
+			</form>
 		)
 	}
 
