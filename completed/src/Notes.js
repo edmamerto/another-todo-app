@@ -34,10 +34,10 @@ class Notes extends Component {
 
 	renderForm(i) {
 		return (
-			<form>
+			<form onSubmit={this.save}>
 				<FormGroup controlId="formControlsTextarea">
 				  <FormControl inputRef={(ref) => {this.textarea = ref}} componentClass="textarea" placeholder="textarea" />
-				  <Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall" type="submit">save</Button>
+				  <Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall" type="button">save</Button>
 				</FormGroup>
 			</form>
 		)
