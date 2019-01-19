@@ -29,13 +29,15 @@ class Notes extends Component {
 
 	save(i){
         this.props.updateEditingState(i)
+        console.log(this.textarea.value)
 	}
 
-	renderForm() {
+	renderForm(i) {
 		return (
-			<form onSubmit={this.save} id="myForm">
+			<form>
 				<FormGroup controlId="formControlsTextarea">
-				  <FormControl componentClass="textarea" placeholder="textarea" />
+				  <FormControl inputRef={(ref) => {this.textarea = ref}} componentClass="textarea" placeholder="textarea" />
+				  <Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall" type="submit">save</Button>
 				</FormGroup>
 			</form>
 		)
@@ -50,13 +52,13 @@ class Notes extends Component {
 		)
 	}
 
-	renderSaveButton(i) {
-		return (
-			<div>
-				<Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall" form="myForm" type="submit">save</Button>
-			</div>
-		)
-	}
+	// renderSaveButton(i) {
+	// 	return (
+	// 		<div>
+	// 			<Button onClick={() => this.save(i)} bsStyle="success" bsSize="xsmall" form="myForm" type="submit">save</Button>
+	// 		</div>
+	// 	)
+	// }
 
 	renderNote(note) {
 		return (
@@ -71,14 +73,14 @@ class Notes extends Component {
 				<Panel.Body>
 					{
 						note.is_editing ?
-						this.renderForm() :
+						this.renderForm(i) :
 						this.renderNote(note.note)
 					}
 				</Panel.Body>
 				<Panel.Footer>
 					{
 						note.is_editing ?
-						this.renderSaveButton(i) :
+						true :
 						this.renderEditDoneButtons(i)
 					}
 				</Panel.Footer>
