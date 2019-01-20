@@ -6,7 +6,7 @@ This project complements my blog so check it out:
 
 
 ## Install
-This was started with `create react-app`
+This was started with `create-react-app`
 ```sh
 $ cd completed
 $ npm install
