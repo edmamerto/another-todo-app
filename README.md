@@ -13,7 +13,7 @@ $ npm install
 ```
 
 ## Run
-Run the script
+Run the app
 ```sh
 $ npm start
 ```
