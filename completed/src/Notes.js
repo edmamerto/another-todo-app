@@ -18,6 +18,7 @@ class Notes extends Component {
 		this.edit = this.edit.bind(this)
 		this.save = this.save.bind(this)
 		this.renderCard = this.renderCard.bind(this)
+		this.remove = this.remove.bind(this)
 		this.state = {
 			isEditing: false
 		}
@@ -27,9 +28,13 @@ class Notes extends Component {
 		this.props.updateEditingState(i)
 	}
 
-	save(i){
+	save(i) {
         this.props.updateEditingState(i)
         this.props.onChange(this.textarea.value, i)
+	}
+
+	remove(i){
+		this.props.onRemove(i)
 	}
 
 	renderForm(i) {
@@ -47,7 +52,7 @@ class Notes extends Component {
 		return (
 			<div>
 				<Button onClick={() => this.edit(i)} bsStyle="link" bsSize="xsmall">edit</Button>
-				<Button bsStyle="primary" bsSize="xsmall">done</Button>
+				<Button onClick={() => this.remove(i)} bsStyle="primary" bsSize="xsmall">done</Button>
 			</div>
 		)
 	}

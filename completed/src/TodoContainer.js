@@ -57,6 +57,7 @@ class TodoContainer extends Component {
 				notes={this.state.notes}
 				updateEditingState={this.updateEditingState}
 				onChange={this.updateTodo}
+				onRemove={this.remove}
 			/>
 		)
 	}
