@@ -6,6 +6,7 @@ class TodoContainer extends Component {
 		super(props)
 		this.updateEditingState = this.updateEditingState.bind(this)
 		this.updateTodo = this.updateTodo.bind(this)
+		this.remove = this.remove.bind(this)
 		this.state = {
 			notes: [
 				{
