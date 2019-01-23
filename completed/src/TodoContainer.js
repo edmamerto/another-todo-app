@@ -44,6 +44,12 @@ class TodoContainer extends Component {
 		}))
 	}
 
+	remove(id) {
+		this.setState(prevState => ({
+			notes: prevState.notes.filter(note => note.id !== id)
+		}))
+	}
+
 	render() {
 		return (
 			<Notes
