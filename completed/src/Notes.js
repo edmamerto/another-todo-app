@@ -97,7 +97,7 @@ class Notes extends Component {
 							{this.props.notes.map(this.renderCard)}
 						</Col>
 					</Row>
-					<Button bsStyle="success" bsSize="xlarge" type="button">Add Note</Button>
+					<Button onClick={this.props.add} bsStyle="success" bsSize="xlarge" type="button">Add Note</Button>
 				</Grid>
 			</div>
 		)
