@@ -7,6 +7,7 @@ class TodoContainer extends Component {
 		this.updateEditingState = this.updateEditingState.bind(this)
 		this.updateTodo = this.updateTodo.bind(this)
 		this.remove = this.remove.bind(this)
+		this.add = this.add.bind(this)
 		this.state = {
 			notes: [
 				{
@@ -26,6 +27,23 @@ class TodoContainer extends Component {
 				}
 			]
 		}
+	}
+
+	nextId() {
+		this.uniqueId = this.uniqueId || 0
+		return this.uniqueId++
+	}
+
+	add(text) {
+		this.setState(prevState => ({
+			notes: [
+				...prevState.notes,
+				{
+					id: this.nextId(),
+					note: text
+				}
+			]
+		}))
 	}
 
 	updateTodo(text, i) {
@@ -59,6 +77,7 @@ class TodoContainer extends Component {
 					updateEditingState={this.updateEditingState}
 					onChange={this.updateTodo}
 					onRemove={this.remove}
+					add={this.add.bind(null, "New Note")}
 				/>
 			</div>
 		)
